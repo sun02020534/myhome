@@ -37,7 +37,26 @@
     <fieldset>
         <legend>주문 정보</legend>
         상품<br>
-        <label for="1box"><input type="checkbox">방울토마토 1kg <s>10,000원</s> <b>8,000dn</b></label>
+        <label for="1box"><input type="checkbox">방울토마토 1kg <s>10,000원</s> <b>8,000원</b></label>박스<br>
+        <label for="2box"><input type="checkbox">방울토마토 2kg <s>20,000원</s> <b>16,000원</b></label>박스<br>
+        <label for="3box"><input type="checkbox">방울토마토 3kg <s>30,000원</s> <b>24,000원</b></label>박스<br>
+        기타 사항<label for="gita"><input type="text"></label>
+        </fieldset>
+    <fieldset>
+        <legend>결제 수단</legend>
+        <ul>
+            <li>
+                <label for="send"><input type="radio" id="send">계좌 이체</label>
+            </li>
+            <li>
+                <label for="card"><input type="radio" id="card">카드 결제</label>
+            </li>
+            <li>
+                <label for="general"><input type="radio" id="general">일반 결제</label>
+            </li>
+        </ul>
     </fieldset>
+    <input type="submit" value="초기화">
+    <input type="submit" value="결제하기">
 </body>
 </html>
