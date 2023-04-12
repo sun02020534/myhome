@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h2>상품 주문서</h2>
+    <fieldset>
+        <legend>개인 정보</legend>
+        <ul>
+            <li>
+                <label for="userid">주문자 이름</label>
+                <input type="text" id="userid">
+            </li>
+            <li>
+                <label for="number">전화 번호</label>
+                <input type="number" id="number" placeholder="번호만 입력">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>배송 정보</legend>
+        <ul>
+            <li>
+                <label for="userid">배송 옵션:</label>
+                <input type="radio" id="option"> 기존 배송지
+                <input type="radio" id="new option"> 새 배송지
+            </li>
+            <li>
+                <label for="address"></label>
+                주소 <input type="text" id="address">
+            </li>
+            <li>
+                요청 사항 <select id="request">
+                </select>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>주문 정보</legend>
+        상품<br>
+        <label for="1box"><input type="checkbox">방울토마토 1kg <s>10,000원</s> <b>8,000dn</b></label>
+    </fieldset>
+</body>
+</html>
