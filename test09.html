@@ -2,60 +2,69 @@
 <html lang="en">
 <body>
     <h2>상품 주문서</h2>
-    <fieldset>
-        <legend>개인 정보</legend>
-        <ul>
-            <li>
-                <label for="userid">주문자 이름</label>
-                <input type="text" id="userid">
-            </li>
-            <li>
-                <label for="number">전화 번호</label>
-                <input type="number" id="number" placeholder="번호만 입력">
-            </li>
-        </ul>
-    </fieldset>
-    <fieldset>
-        <legend>배송 정보</legend>
-        <ul>
-            <li>
-                <label for="userid">배송 옵션:</label>
-                <input type="radio" id="option"> 기존 배송지
-                <input type="radio" id="new option"> 새 배송지
-            </li>
-            <li>
-                <label for="address"></label>
-                주소 <input type="text" id="address">
-            </li>
-            <li>
-                요청 사항 <select id="request">
-                </select>
-            </li>
-        </ul>
-    </fieldset>
-    <fieldset>
-        <legend>주문 정보</legend>
-        상품<br>
-        <label for="1box"><input type="checkbox">방울토마토 1kg <s>10,000원</s> <b>8,000원</b></label>박스<br>
-        <label for="2box"><input type="checkbox">방울토마토 2kg <s>20,000원</s> <b>16,000원</b></label>박스<br>
-        <label for="3box"><input type="checkbox">방울토마토 3kg <s>30,000원</s> <b>24,000원</b></label>박스<br>
-        기타 사항<label for="gita"><input type="text"></label>
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="userid">주문자 이름</label>
+                    <input type="text" id="userid">
+                </li>
+                <li>
+                    <label for="number">전화 번호</label>
+                    <input type="number" id="number" placeholder="번호만 입력">
+                </li>
+            </ul>
         </fieldset>
-    <fieldset>
-        <legend>결제 수단</legend>
-        <ul>
-            <li>
-                <label for="send"><input type="radio" id="send">계좌 이체</label>
-            </li>
-            <li>
-                <label for="card"><input type="radio" id="card">카드 결제</label>
-            </li>
-            <li>
-                <label for="general"><input type="radio" id="general">일반 결제</label>
-            </li>
-        </ul>
-    </fieldset>
-    <input type="submit" value="초기화">
-    <input type="submit" value="결제하기">
+        <fieldset>
+            <legend>배송 정보</legend>
+            <ul>
+                <li>
+                    <label for="quick">배송 옵션:</label>
+                    <input type="radio" id="quickoption" name="quick"> 기존 배송지
+                    <input type="radio" id="newquickoption" name="quick"> 새 배송지
+                </li>
+                <li>
+                    <label for="address"></label>
+                    주소 <input type="text" id="address">
+                </li>
+                <li>
+                    <label for=""request">요청사항</label> 
+                    <select name="request" id="request">
+                        <optiongroup label="request">
+                            <option value="">요청사항을 선택하세요.</option>
+                            <option value="quick1">배송 전에 미리 연락 바랍니다.</option>
+                            <option value="quick2">부재시 경비실에 맡겨주세요.</option>
+                            <option value="quick2">부재시 전화 주시거나 문자 남겨 주세요.</option>
+                        </optiongroup>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>주문 정보</legend>
+            상품<br>
+            <label for="1box"><input type="checkbox">방울토마토 1kg <s>10,000원</s> <b>8,000원</b></label><br>
+            <label for="1box"><input type="checkbox">방울토마토 2kg <s>20,000원</s> <b>16,000원</b></label><br>
+            <label for="1box"><input type="checkbox">방울토마토 3kg <s>30,000원</s> <b>24,000원</b></label><br>
+            <label for="other">기타 사항<textarea id="other" name="other" rows="4" cols="30"></textarea></label>
+            </fieldset>
+            <fieldset>
+                <legend>결제 수단</legend>
+                <ul>
+                    <li>
+                        <label for="send"><input type="radio" id="send" name="buy">계좌 이체</label>
+                    </li>
+                    <li>
+                        <label for="card"><input type="radio" id="card" name="buy">카드 결제</label>
+                    </li>
+                    <li>
+                        <label for="general"><input type="radio" id="general" name="buy">일반 결제</label>
+                    </li>
+                </ul>
+            </fieldset><br>
+            <label for="reset"><input type="reset"></label>
+            <label for="credit"><input type="submit" value="결제하기"></label>
+        </form>
 </body>
 </html>
